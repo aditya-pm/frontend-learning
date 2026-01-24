@@ -91,9 +91,9 @@ When introduced, frameworks will:
 
 ## What This Repository Is NOT
 
-* ❌ A portfolio
-* ❌ A framework showcase
-* ❌ A production-ready codebase
+* A portfolio
+* A framework showcase
+* A production-ready codebase
 
 When a demo grows beyond learning scope, it should be:
 
@@ -101,7 +101,6 @@ When a demo grows beyond learning scope, it should be:
 * Extracted
 * Promoted to its own repository
 
----
 
 ## Progress Tracking
 
@@ -113,7 +112,6 @@ Progress is tracked through:
 
 This approach favors **visible learning over artificial completeness**.
 
----
 
 ## License
 
