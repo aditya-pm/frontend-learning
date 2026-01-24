@@ -1,0 +1,27 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Dependencies (if you later experiment)
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build / tooling outputs (future-proofing)
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Env files
+.env
+.env.local
