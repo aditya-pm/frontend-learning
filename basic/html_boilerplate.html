@@ -1,0 +1,137 @@
+<!-- ========================================================= -->
+<!-- HTML DOCUMENT STRUCTURE -->
+<!-- ========================================================= -->
+
+<!--
+Every HTML page should start with:
+
+<!DOCTYPE html>
+
+This tells the browser:
+"Use modern HTML5 rules."
+-->
+
+<!DOCTYPE html>
+
+<!--
+Root element.
+
+Permitted direct children:
+- head
+- body
+
+lang attribute:
+language of page
+-->
+
+<html lang="en">
+
+<!-- ===================================================== -->
+<!-- HEAD -->
+<!-- ===================================================== -->
+
+<!--
+    Contains metadata.
+
+    NOT displayed on page.
+
+    Common contents:
+
+    - title
+    - meta
+    - link
+    - script
+    - style
+    -->
+
+<head>
+
+  <!--
+        Page title.
+
+        Appears:
+        - browser tab
+        - bookmarks
+        - search engines
+        -->
+
+  <title>My Website</title>
+
+  <!--
+        Character encoding.
+
+        Almost always UTF-8.
+        -->
+
+  <meta charset="UTF-8">
+
+  <!--
+        Responsive design support.
+
+        Important for mobile devices.
+        -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+        Page description.
+
+        Search engines may use this.
+        -->
+
+  <meta name="description" content="Example website.">
+
+  <!--
+        External CSS file.
+        -->
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!--
+        Internal CSS.
+        -->
+
+  <style>
+    h1 {
+      color: blue;
+    }
+  </style>
+
+  <!--
+        JavaScript.
+        -->
+
+  <script src="script.js"></script>
+
+</head>
+
+
+
+<!-- ===================================================== -->
+<!-- BODY -->
+<!-- ===================================================== -->
+
+<!--
+    Everything visible to users.
+
+    Contains:
+    - headings
+    - paragraphs
+    - images
+    - forms
+    - tables
+    - lists
+    - etc.
+    -->
+
+<body>
+
+  <h1>Welcome</h1>
+
+  <p>
+    Visible content goes here.
+  </p>
+
+</body>
+
+</html>

@@ -1,0 +1,387 @@
+<!-- ========================================================= -->
+<!-- HEADINGS -->
+<!-- ========================================================= -->
+
+<!--
+Heading elements represent document headings.
+
+Allowed:
+- Can contain phrasing content (text, links, bold text, etc.)
+- Should NOT contain other heading elements
+
+Levels:
+h1 = most important
+h6 = least important
+
+Typically:
+1 h1 per page
+Multiple h2, h3, etc.
+-->
+
+<h1>Main Page Title</h1>
+<h2>Section Title</h2>
+<h3>Subsection Title</h3>
+<h4>Smaller Heading</h4>
+<h5>Even Smaller Heading</h5>
+<h6>Smallest Heading</h6>
+
+
+
+<!-- ========================================================= -->
+<!-- PARAGRAPH -->
+<!-- ========================================================= -->
+
+<!--
+<p> represents a paragraph.
+
+Attributes:
+- global attributes only
+  - id
+  - class
+  - style
+  - title
+  - hidden
+  - data-*
+
+Can contain:
+- text
+- links
+- bold text
+- emphasis
+- images
+- other phrasing content
+
+Cannot contain:
+- div
+- another p
+- heading elements
+-->
+
+<p>
+  This is a paragraph.
+</p>
+
+
+
+<!-- ========================================================= -->
+<!-- BOLD -->
+<!-- ========================================================= -->
+
+<!--
+<b> visually makes text bold.
+
+Does NOT add semantic meaning.
+
+Can contain:
+- text
+- links
+- images
+- phrasing content
+
+Alternative:
+<strong>
+Use when text is important.
+-->
+
+<p>
+  This is <b>bold text</b>.
+</p>
+
+<p>
+  This is <strong>important text</strong>.
+</p>
+
+
+
+<!-- ========================================================= -->
+<!-- UNORDERED LIST -->
+<!-- ========================================================= -->
+
+<!--
+<ul> = unordered list
+
+Permitted direct children:
+- li only
+
+NOT allowed:
+- p
+- div
+- text directly
+
+Each list item must be wrapped in li.
+-->
+
+<ul>
+  <li>Milk</li>
+  <li>Eggs</li>
+  <li>Bread</li>
+</ul>
+
+
+
+<!-- ========================================================= -->
+<!-- ORDERED LIST -->
+<!-- ========================================================= -->
+
+<!--
+<ol> = ordered list
+
+Permitted direct children:
+- li only
+
+Useful for:
+- steps
+- rankings
+- instructions
+
+Attributes:
+
+start
+    Starting number
+
+reversed
+    Counts backwards
+
+type
+    1
+    A
+    a
+    I
+    i
+-->
+
+<ol>
+  <li>Open browser</li>
+  <li>Visit website</li>
+  <li>Login</li>
+</ol>
+
+<ol start="5">
+  <li>Item 5</li>
+  <li>Item 6</li>
+</ol>
+
+<ol reversed>
+  <li>Third</li>
+  <li>Second</li>
+  <li>First</li>
+</ol>
+
+
+
+<!-- ========================================================= -->
+<!-- LIST ITEM -->
+<!-- ========================================================= -->
+
+<!--
+<li> = list item
+
+Must be inside:
+- ul
+- ol
+- menu
+
+Can contain:
+- text
+- paragraphs
+- links
+- images
+- nested lists
+- almost any flow content
+-->
+
+<ul>
+  <li>
+    Item with a paragraph
+
+    <p>
+      Extra description.
+    </p>
+  </li>
+</ul>
+
+
+
+<!-- ========================================================= -->
+<!-- NESTED LISTS -->
+<!-- ========================================================= -->
+
+<!--
+Lists can be nested.
+
+The nested list must be placed
+inside an li.
+-->
+
+<ul>
+  <li>
+    Fruits
+
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Mango</li>
+    </ul>
+  </li>
+
+  <li>
+    Vegetables
+
+    <ul>
+      <li>Carrot</li>
+      <li>Potato</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+<!-- ========================================================= -->
+<!-- ANCHOR TAG -->
+<!-- ========================================================= -->
+
+<!--
+<a> creates hyperlinks.
+
+Attributes:
+
+href
+    Destination URL
+
+target
+    Where to open link
+
+    _self   current tab
+    _blank  new tab
+
+rel
+    Relationship metadata
+
+    Often used with _blank
+
+download
+    Download resource
+
+title
+    Tooltip text
+-->
+
+<a href="https://google.com">
+  Visit Google
+</a>
+
+<a href="https://google.com" target="_blank" rel="noopener noreferrer">
+  Open Google In New Tab
+</a>
+
+<a href="file.pdf" download>
+  Download PDF
+</a>
+
+
+
+<!-- ========================================================= -->
+<!-- INTERNAL PAGE LINKS -->
+<!-- ========================================================= -->
+
+<!--
+Link to another element on same page.
+
+Target element needs an id.
+-->
+
+<h2 id="contact">
+  Contact Section
+</h2>
+
+<a href="#contact">
+  Jump To Contact
+</a>
+
+
+
+<!-- ========================================================= -->
+<!-- EMAIL LINKS -->
+<!-- ========================================================= -->
+
+<a href="mailto:test@example.com">
+  Send Email
+</a>
+
+
+
+<!-- ========================================================= -->
+<!-- PHONE LINKS -->
+<!-- ========================================================= -->
+
+<a href="tel:+1234567890">
+  Call Number
+</a>
+
+
+
+<!-- ========================================================= -->
+<!-- IMAGE -->
+<!-- ========================================================= -->
+
+<!--
+<img> embeds an image.
+
+Void element:
+NO closing tag
+
+Required attribute:
+
+src
+    Image location
+
+Recommended:
+
+alt
+    Alternative text
+
+Useful attributes:
+
+width
+height
+loading
+title
+-->
+
+<img src="cat.jpg" alt="Orange cat sitting on a chair" />
+
+<img src="cat.jpg" alt="Orange cat" width="300" height="200" />
+
+<img src="large-image.jpg" alt="Large image" loading="lazy" />
+
+
+
+<!-- ========================================================= -->
+<!-- COMMON GLOBAL ATTRIBUTES -->
+<!-- ========================================================= -->
+
+<!--
+Most HTML elements support:
+
+id
+    Unique identifier
+
+class
+    CSS classes
+
+style
+    Inline CSS
+
+title
+    Tooltip
+
+hidden
+    Hide element
+
+data-*
+    Custom data
+-->
+
+<p id="intro" class="important" title="Introduction Paragraph">
+  Example paragraph.
+</p>
