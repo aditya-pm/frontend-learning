@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-items Reference</title>
+
+  <style>
+    /*
+      ALIGN-ITEMS
+
+      Controls alignment along the CROSS AXIS.
+
+      If flex-direction: row;
+      -> Main axis  = Horizontal
+      -> Cross axis = Vertical
+
+      If flex-direction: column;
+      -> Main axis  = Vertical
+      -> Cross axis = Horizontal
+
+      Remember:
+
+      justify-content = main axis
+      align-items     = cross axis
+
+      display: flex defaults to:
+
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+    */
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    h1,
+    h2 {
+      margin-top: 40px;
+    }
+
+    /* ------------------------------
+       ROW EXAMPLES
+       Cross Axis = Vertical
+    ------------------------------ */
+
+    #row-flex-start {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    #row-center {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    #row-flex-end {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    #row-stretch {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    /* aligns base of TEXT, not the box */
+    #row-baseline {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    /* ------------------------------
+       COLUMN EXAMPLES
+       Cross Axis = Horizontal
+    ------------------------------ */
+
+    #column-flex-start {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    #column-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #column-flex-end {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    #column-stretch {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    #column-baseline {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+    }
+
+    /*
+      Styling below is only for making
+      the examples easier to see.
+    */
+
+    .row-demo {
+      height: 250px;
+      width: 100%;
+      margin-bottom: 30px;
+      background-color: #252422;
+    }
+
+    .column-demo {
+      height: 400px;
+      width: 500px;
+      margin-bottom: 30px;
+      background-color: #252422;
+    }
+
+    .row-demo div,
+    .column-demo div {
+      padding: 20px;
+      margin: 10px;
+      background-color: #eb5e28;
+      color: white;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /*
+      Special styling so stretch can be seen.
+      We remove fixed widths/heights.
+    */
+
+    #row-stretch div {
+      margin: 10px;
+      padding: 20px;
+    }
+
+    #column-stretch div {
+      margin: 10px;
+      padding: 20px;
+    }
+
+    /*
+      Different font sizes help demonstrate baseline.
+    */
+
+    .small {
+      font-size: 16px;
+    }
+
+    .medium {
+      font-size: 28px;
+    }
+
+    .large {
+      font-size: 42px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>align-items Reference</h1>
+
+  <p>
+    <strong>Rule:</strong>
+    align-items controls alignment along the
+    <strong>cross axis</strong>.
+  </p>
+
+  <hr>
+
+  <h2>flex-direction: row</h2>
+
+  <p>
+    Main axis = Horizontal<br>
+    Cross axis = Vertical
+  </p>
+
+  <div class="label">
+    align-items: flex-start
+  </div>
+
+  <div id="row-flex-start" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    align-items: center
+  </div>
+
+  <div id="row-center" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    align-items: flex-end
+  </div>
+
+  <div id="row-flex-end" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    align-items: stretch
+  </div>
+
+  <div id="row-stretch" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    align-items: baseline
+  </div>
+
+  <div id="row-baseline" class="row-demo">
+    <div class="small">Small</div>
+    <div class="medium">Medium</div>
+    <div class="large">Large</div>
+  </div>
+
+  <hr>
+
+  <h2>flex-direction: column</h2>
+
+  <p>
+    Main axis = Vertical<br>
+    Cross axis = Horizontal
+  </p>
+
+  <div class="label">
+    align-items: flex-start
+  </div>
+
+  <div id="column-flex-start" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    align-items: center
+  </div>
+
+  <div id="column-center" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    align-items: flex-end
+  </div>
+
+  <div id="column-flex-end" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    align-items: stretch
+  </div>
+
+  <div id="column-stretch" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    align-items: baseline
+  </div>
+
+  <div id="column-baseline" class="column-demo">
+    <div class="small">Small</div>
+    <div class="medium">Medium</div>
+    <div class="large">Large</div>
+  </div>
+
+</body>
+
+</html>

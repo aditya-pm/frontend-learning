@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-content Reference</title>
+
+  <style>
+    /*
+      ALIGN-CONTENT
+
+      Controls the alignment of FLEX LINES
+      along the cross axis.
+
+      IMPORTANT:
+      align-content only works when:
+
+      1. flex-wrap: wrap;
+      2. Multiple flex lines exist.
+      3. The container has extra space.
+
+      Remember:
+
+      justify-content -> moves items on the main axis
+      align-items     -> moves items on the cross axis
+      align-content   -> moves flex lines on the cross axis
+    */
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    h1,
+    h2 {
+      margin-top: 40px;
+    }
+
+    /*
+      Common styles for all examples.
+
+      width forces wrapping.
+      height creates extra space so
+      align-content can be observed.
+    */
+    .demo {
+      display: flex;
+      flex-wrap: wrap;
+
+      width: 500px;
+      height: 500px;
+
+      margin-bottom: 30px;
+
+      background-color: #252422;
+    }
+
+    .demo div {
+      width: 120px;
+      padding: 20px;
+      margin: 10px;
+
+      background-color: #eb5e28;
+      color: white;
+
+      text-align: center;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* ------------------------------
+       ROW EXAMPLES
+       Cross Axis = Vertical
+    ------------------------------ */
+
+    #row-flex-start {
+      flex-direction: row;
+
+      /* Pack flex lines at the top */
+      align-content: flex-start;
+    }
+
+    #row-center {
+      flex-direction: row;
+
+      /* Pack flex lines in the center */
+      align-content: center;
+    }
+
+    #row-flex-end {
+      flex-direction: row;
+
+      /* Pack flex lines at the bottom */
+      align-content: flex-end;
+    }
+
+    #row-space-between {
+      flex-direction: row;
+
+      /* Equal space between flex lines */
+      align-content: space-between;
+    }
+
+    #row-space-around {
+      flex-direction: row;
+
+      /*
+        Equal space around flex lines.
+        Edge space is half-sized.
+      */
+      align-content: space-around;
+    }
+
+    #row-space-evenly {
+      flex-direction: row;
+
+      /* Equal space everywhere */
+      align-content: space-evenly;
+    }
+
+    #row-stretch {
+      flex-direction: row;
+
+      /* Stretch flex lines to fill space */
+      align-content: stretch;
+    }
+
+    /* ------------------------------
+       COLUMN EXAMPLES
+       Cross Axis = Horizontal
+    ------------------------------ */
+
+    #column-flex-start {
+      flex-direction: column;
+
+      /* Pack flex lines at the left */
+      align-content: flex-start;
+    }
+
+    #column-center {
+      flex-direction: column;
+
+      /* Pack flex lines in the center */
+      align-content: center;
+    }
+
+    #column-flex-end {
+      flex-direction: column;
+
+      /* Pack flex lines at the right */
+      align-content: flex-end;
+    }
+
+    #column-space-between {
+      flex-direction: column;
+
+      /* Equal space between flex lines */
+      align-content: space-between;
+    }
+
+    #column-space-around {
+      flex-direction: column;
+
+      /*
+        Equal space around flex lines.
+        Edge space is half-sized.
+      */
+      align-content: space-around;
+    }
+
+    #column-space-evenly {
+      flex-direction: column;
+
+      /* Equal space everywhere */
+      align-content: space-evenly;
+    }
+
+    #column-stretch {
+      flex-direction: column;
+
+      /* Stretch flex lines to fill space */
+      align-content: stretch;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>align-content Reference</h1>
+
+  <p>
+    <strong>Rule:</strong>
+    align-content moves flex lines on the cross axis.
+  </p>
+
+  <hr>
+
+  <h2>flex-direction: row</h2>
+
+  <p>
+    Main axis = Horizontal<br>
+    Cross axis = Vertical
+  </p>
+
+  <div class="label">
+    align-content: flex-start
+  </div>
+
+  <div id="row-flex-start" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <div class="label">
+    align-content: center
+  </div>
+
+  <div id="row-center" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <div class="label">
+    align-content: flex-end
+  </div>
+
+  <div id="row-flex-end" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <div class="label">
+    align-content: space-between
+  </div>
+
+  <div id="row-space-between" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <div class="label">
+    align-content: space-around
+  </div>
+
+  <div id="row-space-around" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <div class="label">
+    align-content: space-evenly
+  </div>
+
+  <div id="row-space-evenly" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <div class="label">
+    align-content: stretch
+  </div>
+
+  <div id="row-stretch" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <hr>
+
+  <h2>flex-direction: column</h2>
+
+  <p>
+    Main axis = Vertical<br>
+    Cross axis = Horizontal
+  </p>
+
+  <div class="label">
+    align-content: flex-start
+  </div>
+
+  <div id="column-flex-start" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <div class="label">
+    align-content: center
+  </div>
+
+  <div id="column-center" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <div class="label">
+    align-content: flex-end
+  </div>
+
+  <div id="column-flex-end" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <div class="label">
+    align-content: space-between
+  </div>
+
+  <div id="column-space-between" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <div class="label">
+    align-content: space-around
+  </div>
+
+  <div id="column-space-around" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <div class="label">
+    align-content: space-evenly
+  </div>
+
+  <div id="column-space-evenly" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+  <div class="label">
+    align-content: stretch
+  </div>
+
+  <div id="column-stretch" class="demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+
+</body>
+
+</html>

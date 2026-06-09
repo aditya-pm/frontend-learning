@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Item Properties Reference</title>
+
+  <style>
+    /*
+      FLEXBOX ITEM PROPERTIES
+
+      order       -> Changes visual order
+      align-self  -> Overrides align-items for one item
+
+      flex-grow   -> How much an item grows
+      flex-shrink -> How much an item shrinks
+      flex-basis  -> Initial size before grow/shrink
+
+      flex        -> Shorthand:
+                     flex-grow flex-shrink flex-basis
+    */
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    h1,
+    h2 {
+      margin-top: 40px;
+    }
+
+    /*
+      Common container styling.
+      Not related to the properties
+      being demonstrated.
+    */
+    .container {
+      display: flex;
+
+      width: 800px;
+      height: 200px;
+
+      margin-bottom: 30px;
+
+      background-color: #252422;
+    }
+
+    .item {
+      padding: 20px;
+      margin: 10px;
+
+      background-color: #eb5e28;
+      color: white;
+
+      text-align: center;
+    }
+
+    /* ==================================================
+       ORDER
+       ================================================== */
+
+    /*
+      Changes visual order.
+
+      Default order is 0.
+
+      Lower values appear first.
+    */
+
+    .order-1 {
+      order: 1;
+    }
+
+    .order-2 {
+      order: 2;
+    }
+
+    .order-3 {
+      order: 3;
+    }
+
+    /* ==================================================
+       ALIGN-SELF
+       ================================================== */
+
+    /*
+      Overrides align-items
+      for a single item.
+    */
+
+    .align-self-container {
+      align-items: center;
+    }
+
+    .align-self-end {
+      align-self: flex-end;
+    }
+
+    /* ==================================================
+       FLEX-GROW
+       ================================================== */
+
+    /*
+      Extra space is distributed
+      according to growth ratios.
+    */
+
+    .grow-1 {
+      flex-grow: 1;
+    }
+
+    .grow-2 {
+      flex-grow: 2;
+    }
+
+    .grow-3 {
+      flex-grow: 3;
+    }
+
+    /* ==================================================
+       FLEX-SHRINK
+       ================================================== */
+
+    /*
+      Items shrink when there
+      isn't enough room.
+    */
+
+    .shrink-container {
+      width: 400px;
+    }
+
+    .shrink-item {
+      width: 200px;
+    }
+
+    .no-shrink {
+      flex-shrink: 0;
+    }
+
+    /* ==================================================
+       FLEX-BASIS
+       ================================================== */
+
+    /*
+      Initial size before
+      grow/shrink calculations.
+    */
+
+    .basis-100 {
+      flex-basis: 100px;
+    }
+
+    .basis-200 {
+      flex-basis: 200px;
+    }
+
+    .basis-300 {
+      flex-basis: 300px;
+    }
+
+    /* ==================================================
+       FLEX (SHORTHAND)
+       ================================================== */
+
+    /*
+      flex: grow shrink basis
+    */
+
+    .flex-1 {
+      flex: 1;
+    }
+
+    .flex-2 {
+      flex: 2;
+    }
+
+    .flex-custom {
+      flex: 1 1 200px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Flexbox Item Properties Reference</h1>
+
+  <!-- ========================================= -->
+  <!-- ORDER                                     -->
+  <!-- ========================================= -->
+
+  <h2>order</h2>
+
+  <p>
+    Changes visual order.
+    Default value is 0.
+  </p>
+
+  <div class="container">
+    <div class="item order-3">HTML 1 (order: 3)</div>
+    <div class="item order-1">HTML 2 (order: 1)</div>
+    <div class="item order-2">HTML 3 (order: 2)</div>
+  </div>
+
+  <!-- ========================================= -->
+  <!-- ALIGN-SELF                                -->
+  <!-- ========================================= -->
+
+  <h2>align-self</h2>
+
+  <p>
+    Overrides align-items
+    for a single item.
+  </p>
+
+  <div class="container align-self-container">
+    <div class="item">Normal</div>
+    <div class="item align-self-end">
+      align-self: flex-end
+    </div>
+    <div class="item">Normal</div>
+  </div>
+
+  <!-- ========================================= -->
+  <!-- FLEX-GROW                                 -->
+  <!-- ========================================= -->
+
+  <h2>flex-grow</h2>
+
+  <p>
+    Extra space is distributed
+    according to growth ratios.
+  </p>
+
+  <div class="container">
+    <div class="item grow-1">
+      flex-grow: 1
+    </div>
+
+    <div class="item grow-2">
+      flex-grow: 2
+    </div>
+
+    <div class="item grow-3">
+      flex-grow: 3
+    </div>
+  </div>
+
+  <!-- ========================================= -->
+  <!-- FLEX-SHRINK                               -->
+  <!-- ========================================= -->
+
+  <h2>flex-shrink</h2>
+
+  <p>
+    Items shrink when there
+    isn't enough room.
+  </p>
+
+  <div class="container shrink-container">
+    <div class="item shrink-item">
+      shrink: 1 (default)
+    </div>
+
+    <div class="item shrink-item no-shrink">
+      shrink: 0
+    </div>
+
+    <div class="item shrink-item">
+      shrink: 1 (default)
+    </div>
+  </div>
+
+  <!-- ========================================= -->
+  <!-- FLEX-BASIS                                -->
+  <!-- ========================================= -->
+
+  <h2>flex-basis</h2>
+
+  <p>
+    Initial size before
+    grow/shrink calculations.
+  </p>
+
+  <div class="container">
+    <div class="item basis-100">
+      basis: 100px
+    </div>
+
+    <div class="item basis-200">
+      basis: 200px
+    </div>
+
+    <div class="item basis-300">
+      basis: 300px
+    </div>
+  </div>
+
+  <!-- ========================================= -->
+  <!-- FLEX (SHORTHAND)                          -->
+  <!-- ========================================= -->
+
+  <h2>flex</h2>
+
+  <p>
+    Shorthand for:
+    flex-grow flex-shrink flex-basis
+  </p>
+
+  <div class="container">
+    <div class="item flex-1">
+      flex: 1
+    </div>
+
+    <div class="item flex-2">
+      flex: 2
+    </div>
+
+    <div class="item flex-custom">
+      flex: 1 1 200px
+    </div>
+  </div>
+
+</body>
+
+</html>

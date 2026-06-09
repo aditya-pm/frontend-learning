@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>justify-content Reference</title>
+
+  <style>
+    /*
+      JUSTIFY-CONTENT
+
+      Controls alignment along the MAIN AXIS.
+
+      If flex-direction: row;
+      -> Main axis is horizontal
+
+      If flex-direction: column;
+      -> Main axis is vertical
+
+      Remember:
+
+      justify-content = main axis
+      align-items     = cross axis
+
+      display: flex defaults to:
+
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+    */
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    h1,
+    h2 {
+      margin-top: 40px;
+    }
+
+    /* ------------------------------
+       ROW EXAMPLES
+       Main Axis = Horizontal
+    ------------------------------ */
+
+    #row-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    #row-flex-start {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    #row-flex-end {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    #row-space-around {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    #row-space-between {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    #row-space-evenly {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    /* ------------------------------
+       COLUMN EXAMPLES
+       Main Axis = Vertical
+    ------------------------------ */
+
+    #column-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #column-flex-start {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    #column-flex-end {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    #column-space-around {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    #column-space-between {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #column-space-evenly {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    /*
+      Styling below is only for making
+      the examples easier to see.
+    */
+
+    .row-demo {
+      margin-bottom: 30px;
+      background-color: #252422;
+    }
+
+    .column-demo {
+      height: 400px;
+      width: 250px;
+      margin-bottom: 30px;
+      background-color: #252422;
+    }
+
+    .row-demo div,
+    .column-demo div {
+      font-size: 20px;
+      padding: 20px;
+      margin: 10px;
+      background-color: #eb5e28;
+      color: white;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>justify-content Reference</h1>
+
+  <p>
+    <strong>Rule:</strong>
+    justify-content controls alignment along the
+    <strong>main axis</strong>.
+  </p>
+
+  <hr>
+
+  <h2>flex-direction: row</h2>
+
+  <p>Main axis = Horizontal</p>
+
+  <div class="label">
+    justify-content: center
+  </div>
+
+  <div id="row-center" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: flex-start
+  </div>
+
+  <div id="row-flex-start" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: flex-end
+  </div>
+
+  <div id="row-flex-end" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: space-around
+  </div>
+
+  <div id="row-space-around" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: space-between
+  </div>
+
+  <div id="row-space-between" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: space-evenly
+  </div>
+
+  <div id="row-space-evenly" class="row-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr>
+
+  <h2>flex-direction: column</h2>
+
+  <p>Main axis = Vertical</p>
+
+  <div class="label">
+    justify-content: center
+  </div>
+
+  <div id="column-center" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: flex-start
+  </div>
+
+  <div id="column-flex-start" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: flex-end
+  </div>
+
+  <div id="column-flex-end" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: space-around
+  </div>
+
+  <div id="column-space-around" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: space-between
+  </div>
+
+  <div id="column-space-between" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <div class="label">
+    justify-content: space-evenly
+  </div>
+
+  <div id="column-space-evenly" class="column-demo">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+</body>
+
+</html>

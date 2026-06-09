@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-wrap-examples</title>
+
+  <style>
+    #no-wrap {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    #wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #wrap-reverse {
+      display: flex;
+      flex-wrap: wrap-reverse;
+    }
+
+    .outer {
+      margin-bottom: 30px;
+      background-color: #252422;
+    }
+
+    .outer div {
+      font-size: 20px;
+      padding: 20px 150px;
+      background-color: #eb5e28;
+      color: white;
+      margin: 10px;
+    }
+  </style>
+
+  <link rel="stylesheet" href="ignore.css">
+</head>
+
+<body>
+  <div id="no-wrap" class="outer">
+    <div>nowrap</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <div id="wrap" class="outer">
+    <div>wrap</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <div id="wrap-reverse" class="outer">
+    <div>wrap-reverse</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+</body>
+
+</html>
