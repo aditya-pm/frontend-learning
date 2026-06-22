@@ -12,7 +12,6 @@ Thumbs.db
 
 # Dependencies (if you later experiment)
 node_modules/
-package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
