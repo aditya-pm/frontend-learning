@@ -1,0 +1,30 @@
+/* DEFAULT THEME */
+
+.theme-default {
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+
+  --secondary: #e5e7eb;
+  --secondary-foreground: #111111;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  --border: #d1d5db;
+}
+
+.light-mode {
+  --background: #ffffff;
+  --foreground: #111111;
+
+  --surface: #ffffff;
+  --surface-foreground: #111111;
+}
+
+.dark-mode {
+  --background: #111111;
+  --foreground: #ffffff;
+
+  --surface: #1e1e1e;
+  --surface-foreground: #ffffff;
+}

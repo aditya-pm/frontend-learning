@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+:root {
+  --background: white;
+  --foreground: black;
+}
+
+.dark {
+  --background: #111;
+  --foreground: white;
+}
+
+.default-theme {
+  --primary: #2563eb;
+  --primary-foreground: white;
+}
